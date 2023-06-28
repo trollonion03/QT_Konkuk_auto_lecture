@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
-    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
-    QTextEdit, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
+    QMainWindow, QMenuBar, QPushButton, QSizePolicy,
+    QStatusBar, QTextEdit, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -37,11 +37,6 @@ class Ui_MainWindow(object):
         self.text_id.setGeometry(QRect(75, 30, 150, 20))
         self.text_id.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.text_id.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.text_pw = QTextEdit(self.centralwidget)
-        self.text_pw.setObjectName(u"text_pw")
-        self.text_pw.setGeometry(QRect(75, 55, 150, 20))
-        self.text_pw.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.text_pw.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(10, 30, 50, 20))
@@ -71,6 +66,10 @@ class Ui_MainWindow(object):
         self.button_Start = QPushButton(self.centralwidget)
         self.button_Start.setObjectName(u"button_Start")
         self.button_Start.setGeometry(QRect(290, 360, 80, 24))
+        self.text_pw = QLineEdit(self.centralwidget)
+        self.text_pw.setObjectName(u"text_pw")
+        self.text_pw.setGeometry(QRect(75, 55, 150, 20))
+        self.text_pw.setEchoMode(QLineEdit.Password)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
