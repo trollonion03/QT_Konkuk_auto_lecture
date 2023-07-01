@@ -1,10 +1,7 @@
 # This Python file uses the following encoding: utf-8
 # uic -g python mainwindow.ui -o mainwindow.py
-import sys, threading, os, winreg, requests
-import xml.etree.ElementTree as ET
-from zipfile import ZipFile
+import sys, threading, winreg
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtCore import Slot, QObject, Signal
 from mainwindow import Ui_MainWindow
