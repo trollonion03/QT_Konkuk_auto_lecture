@@ -52,5 +52,5 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
-scripts.ipynb
 masdf.py
+*.pyc
