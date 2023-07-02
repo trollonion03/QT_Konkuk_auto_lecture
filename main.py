@@ -188,9 +188,7 @@ class MainWindow(QMainWindow):
                 self.ui.textEdit_2.append("alert accepted")
             except:
                 self.ui.textEdit_2.append("no alert - error excepted")
-            self.ui.textEdit_2.append(f"Closing Lecture - {subtitle}")
-            
-
+            self.ui.textEdit_2.append(f"Closing Lecture - {subtitle}")        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
@@ -202,5 +200,3 @@ if __name__ == "__main__":
     t1.start()
 
     sys.exit(app.exec())
-
-
