@@ -17,6 +17,14 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        warnBox = QMessageBox()
+        warnBox.setWindowTitle("경고")
+        warnBox.setText("해당 프로그램은 온라인 강의 자동 수강 보조 도구입니다.\n이 도구를 사용함으로써 발생하는 모든 결과와 불이익에 대한 책임은\n전적으로 사용자 본인에게 있음을 알립니다.")
+        warnBox.setIcon(QMessageBox.Warning)
+        warnBox.exec()
+
+        self.setWindowTitle("건국대학교 이캠퍼스 자동수강")
         self.ui.button_Exit.clicked.connect(self.onExitClick)
         self.ui.button_Start.clicked.connect(self.onStartClick)
         self.title = ""
@@ -39,7 +47,7 @@ class MainWindow(QMainWindow):
 
         try:
             chrome_options = webdriver.ChromeOptions()
-            chrome_options.add_argument('--headless') #동작 확인 위해 비활성화
+            chrome_options.add_argument('--headless')
             driver = webdriver.Chrome(options=chrome_options)
             capabilities = driver.capabilities
             version = capabilities['chrome']['chromedriverVersion'].split(' ')[0]
@@ -49,11 +57,8 @@ class MainWindow(QMainWindow):
             self.ui.textEdit_2.append("ChromeDriver 버전을 가져오는 도중 오류가 발생하였습니다.")
             self.ui.button_Start.setDisabled(True)
             driver.quit()
-        finally:
-            driver.quit()
 
         driver.quit()
-        print("이건 왜 안죽니")
 
     @Slot()
     def onStartClick(self):
