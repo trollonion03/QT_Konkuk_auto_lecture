@@ -57,3 +57,4 @@ masdf.py
 build/*
 dist/*
 __pycache__/*
+*.exe
