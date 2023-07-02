@@ -17,11 +17,11 @@ Unicode true
 
 Name "${APP_NAME}"
 
-OutFile "Konkuk_Auto_Lecture_Installer.exe"
+OutFile "Konkuk_Auto_Lecture_Installer_${PRODUCT_VERSION}.exe"
 
 InstallDir "$PROGRAMFILES32\Konkuk_Auto_Lecture"
 
-#XPStyle on
+#XPStyle ons
 
 #SetCompressor zlib
 
